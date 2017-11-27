@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -28,3 +28,36 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+Bob = rg.SimpleTurtle('turtle')
+Bob.pen = rg.Pen('red',5)
+Bob.speed = 15
+size = 250
+
+for k in range(3):
+    Bob.draw_square(size)
+    Bob.pen_up()
+    Bob.right(90)
+    Bob.forward(20)
+    Bob.right(45)
+    Bob.forward(50)
+    Bob.pen_down()
+
+Rin = rg.SimpleTurtle('turtle')
+Rin.pen = rg.Pen('blue',5)
+Rin.speed = 15
+size = 180
+
+for l in range(8):
+    Rin.draw_square(size)
+    Rin.pen_up()
+    Rin.left(90)
+    Rin.forward(20)
+    Rin.right(45)
+    Rin.forward(50)
+    Rin.pen_down()
+
+window.close_on_mouse_click()
